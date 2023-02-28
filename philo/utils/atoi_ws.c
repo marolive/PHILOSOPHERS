@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_ws.c                                       :+:      :+:    :+:   */
+/*   atoi_ws.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marolive <marolive@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 08:48:45 by marolive          #+#    #+#             */
-/*   Updated: 2023/02/04 12:52:10 by marolive         ###   ########.fr       */
+/*   Updated: 2023/02/23 20:33:51 by marolive         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	atoi_ws(const char *str)
 {
-	long			resul;
-	unsigned int	i;
-	long			neg;
+	int			resul;
+	int			i;
+	int			neg;
 
 	neg = 1;
 	resul = 0;
@@ -33,5 +33,5 @@ int	atoi_ws(const char *str)
 		resul = resul * 10 + str[i] - '0';
 		i++;
 	}
-	return ((int)resul * neg);
+	return (resul * neg);
 }
